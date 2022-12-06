@@ -8,11 +8,11 @@ import { rendererConfig } from './webpack.renderer.config';
 
 const config: ForgeConfig = {
   packagerConfig: { 
-     
+    
   },
 
   rebuildConfig: {
-    
+
   },
   makers: [new MakerSquirrel({}), new MakerZIP({}, ['darwin']),],
   plugins: [
