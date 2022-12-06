@@ -20,6 +20,8 @@ const createWindow = (): void => {
     maximizable: false,
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
+      devTools: false,
+      
     },
   });
 
@@ -39,10 +41,8 @@ app.on('ready', createWindow);
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
-});
+  if (process.platform !== 'darwin') app.quit()
+})
 
 app.on('activate', () => {
   // On OS X it's common to re-create a window in the app when the
