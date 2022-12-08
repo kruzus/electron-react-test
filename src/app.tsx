@@ -1,12 +1,13 @@
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
+import { Counter } from "./components/Counter";
+import { Layout } from "./_Layout";
 
-import {Counter} from "./components/Counter"
-import {Layout} from "./_Layout"
 
-ReactDOM.render(
-<>  
-    <Layout>
-            <Counter />
-    </Layout>
-</>,
-document.getElementById('root'));
+createRoot(document.getElementById("root"))
+  .render(
+    <>
+      <Layout>
+        <Counter />
+      </Layout>
+    </>,
+  );

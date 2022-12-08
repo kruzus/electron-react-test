@@ -1,17 +1,17 @@
-import {Navbar } from "./components/Nav/Navbar";
+import { NavbarMenu } from "./components/Nav/Navbar";
 
 interface Props {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export function Layout(props: Props) {
-    return(
-        <>
-         {/*menu below..*/}
-        <Navbar />
+  return (
+    <>
+      {/*menu below..*/}
+      <NavbarMenu />
 
-        {/*content below..*/}
-        {props.children}
-        </>
-    )
+      {/*content below..*/}
+      {props.children}
+    </>
+  );
 }
