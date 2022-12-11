@@ -11,6 +11,7 @@ export function Layout(props: Props) {
       <NavbarMenu />
 
       {/*content below..*/}
+      
       {props.children}
     </>
   );
